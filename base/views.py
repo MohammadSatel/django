@@ -1,24 +1,28 @@
-from django.http import JsonResponse
 from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
 # Create your views here.
 @api_view(['GET','POST'])
 def index(req):
-    return JsonResponse('home', safe=False)
+    return Response("home")
 
 
+@api_view(['GET','POST'])
 def about(req):
-    return JsonResponse('about page', safe=False)
+    return Response('about page')
 
 
+@api_view(['GET','POST'])
 def books(req):
-    return JsonResponse('books page', safe=False)
+    return Response('books page')
 
 
+@api_view(['GET','POST'])
 def customers(req):
-    return JsonResponse('customers page', safe=False)
+    return Response('customers page')
 
 
+@api_view(['GET','POST'])
 def loans(req):
-    return JsonResponse('loans page', safe=False)
+    return Response('loans page')
